@@ -1,106 +1,129 @@
-//Single Inheritance
-console.log("Single Inheritance - inheritance.js:2");
+// Assignment 1: Implement Inheritance Types using JavaScript
+
+// 1. SINGLE INHERITANCE
 class Animal {
-    constructor(name){
-        this.name=name;
-    }
-    eat(){
-        console.log(`${this.name} is eating. - inheritance.js:8`);
+    eat() {
+        console.log("Animal can eat");
     }
 }
-class Dog extends Animal{
-    bark(){
-        console.log(`${this.name} is barking. - inheritance.js:13`)
-    } 
-}
-const myDog = new Dog("Buddy");
-myDog.eat();
-myDog.bark();
 
-//Multilevel Inheritance
-console.log("Multilevel Inheritance - inheritance.js:21");
-class Vehicle {
-    move(){
-        console.log("Moving forward - inheritance.js:24");
+class Dog extends Animal {
+    bark() {
+        console.log("Dog can bark");
     }
 }
-class Bike extends Vehicle{
-    wheels(){
-        console.log("Bike has 2 Wheels - inheritance.js:29");
-    }
-}
-class Car extends Bike{
-    windows(){
-        console.log("Car has 4 Windows - inheritance.js:34");
-    }
-}
-const v = new Car();
-v.move();
-v.wheels();
-v.windows();
 
-//Hierarchial Inheritance
-console.log("Hierarchial Inheritance - inheritance.js:43");
-class User{
-    constructor(username){
-        this.username = username;
-    }
-    login(){
-        console.log(`${this.username} logged in. - inheritance.js:49`);
-    }
-}
-class Admin extends User{
-    deleteUser(){
-        console.log(`${this.username} deleted by admin - inheritance.js:54`);
-    }
-}
-class Customer extends User{
-    checkout(){
-        console.log(`${this.username} checked out successfully. - inheritance.js:59`);
-    }
-}
-const a = new Admin("Anvitha");
-const c = new Customer("Sam");
-a.login();
-c.login();
-a.deleteUser();
-c.checkout();
+console.log("1. Single Inheritance");
+let dog = new Dog();
+dog.eat();
+dog.bark();
 
-//Multiple Inheritance
-console.log("Multiple Inheritance - inheritance.js:70");
-//Using Mixins
-const hall = {
-    sofa(){
-        console.log("Sofa is placed in Hall. - inheritance.js:74");
-    },
-    tv(){
-        console.log("Tv is placed in Hall. - inheritance.js:77")
+
+// 2. MULTILEVEL INHERITANCE
+class Grandparent {
+    house() {
+        console.log("Grandparent has a house");
     }
-}; 
-const bedRoom = {
-    bed(){
-        console.log("Bed is in bedroom. - inheritance.js:82");
-    },
-    closet(){
-        console.log("Closet is in Bedroom. - inheritance.js:85");
+}
+
+class Parent extends Grandparent {
+    car() {
+        console.log("Parent has a car");
+    }
+}
+
+class Child extends Parent {
+    bike() {
+        console.log("Child has a bike");
+    }
+}
+
+console.log("\n2. Multilevel Inheritance");
+let child = new Child();
+child.house();
+child.car();
+child.bike();
+
+
+// 3. HIERARCHICAL INHERITANCE
+class Person {
+    walk() {
+        console.log("Person can walk");
+    }
+}
+
+class Student extends Person {
+    study() {
+        console.log("Student can study");
+    }
+}
+
+class Teacher extends Person {
+    teach() {
+        console.log("Teacher can teach");
+    }
+}
+
+console.log("\n3. Hierarchical Inheritance");
+
+let student = new Student();
+student.walk();
+student.study();
+
+let teacher = new Teacher();
+teacher.walk();
+teacher.teach();
+
+
+// 4. MULTIPLE INHERITANCE USING MIXINS
+const Swimming = {
+    swim() {
+        console.log("Can swim");
     }
 };
-class Building{
-    constructor(houseNo){
-        this.houseNo = houseNo;
+
+const Flying = {
+    fly() {
+        console.log("Can fly");
     }
-    house(){
-        console.log(`Building House No: ${this.houseNo} - inheritance.js:93`);
-    }
-}
-class Area extends Building{
-    constructor(houseNo,area){
-        super(houseNo);
-        this.area = area;
+};
+
+class Bird {
+    eat() {
+        console.log("Bird can eat");
     }
 }
-Object.assign(Area.prototype,hall,bedRoom);
-const name = new Area("403","Kommadi");
-name.house();
-name.sofa();
-name.bed();
+
+Object.assign(Bird.prototype, Swimming, Flying);
+
+console.log("\n4. Multiple Inheritance");
+let bird = new Bird();
+bird.eat();
+bird.swim();
+bird.fly();
+
+
+// 5. HYBRID INHERITANCE
+class Vehicle {
+    start() {
+        console.log("Vehicle can start");
+    }
+}
+
+class Car extends Vehicle {
+    drive() {
+        console.log("Car can drive");
+    }
+}
+
+class ElectricCar extends Car {
+    charge() {
+        console.log("Electric car can charge");
+    }
+}
+
+console.log("\n5. Hybrid Inheritance");
+let electricCar = new ElectricCar();
+electricCar.start();
+electricCar.drive();
+electricCar.charge();
