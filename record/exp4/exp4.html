@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #e8f4ff;
+            padding: 50px;
+        }
+
+        .box {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: #3366cc;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cc5200;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1 id="title">Welcome</h1>
+
+        <p id="message">
+            Click a button to change the webpage.
+        </p>
+
+        <button onclick="changeText()">
+            Change Text
+        </button>
+
+        <button onclick="changeColor()">
+            Change Color
+        </button>
+
+    </div>
+
+    <script src="exp4.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Styled Webpage</title>
+
+
+    <style>
+
+        /* General Styling */
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+        }
+
+
+        /* Header */
+
+        header {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background: orange;
+            border-radius: 5px;
+        }
+
+
+        /* Cards */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px;
+            flex-wrap: wrap;
+        }
+
+
+        .card {
+            width: 280px;
+            background: white;
+            border: 2px solid #0d47a1;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 5px 5px 15px gray;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .card h3 {
+            color: #0d47a1;
+        }
+
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        /* Button */
+
+        button {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: green;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= PART B: HEADER ================= -->
+
+    <header id="home">
+
+        <h1>My Styled Webpage</h1>
+
+        <p>HTML5 Graphics and CSS3 Web Styling</p>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#cards">Cards</a>
+
+        <a href="#footer">Footer</a>
+
+    </nav>
+
+
+    <!-- ================= THREE CONTENT CARDS ================= -->
+
+    <section id="cards" class="cards">
+
+
+        <!-- Card 1 -->
+
+        <div class="card">
+
+            <h3>HTML5</h3>
+
+            <p>
+                HTML5 introduces semantic elements, multimedia support,
+                and the Canvas element for creating graphics.
+            </p>
+
+            <button>Learn More</button>
+
+        </div>
+
+
+        <!-- Card 2 -->
+
+        <div class="card">
+
+            <h3>CSS3</h3>
+
+            <p>
+                CSS3 enhances webpages using gradients, borders,
+                rounded corners, shadows and hover effects.
+            </p>
+
+            <button>Explore</button>
+
+        </div>
+
+
+        <!-- Card 3 -->
+
+        <div class="card">
+
+            <h3>Canvas</h3>
+
+            <p>
+                HTML5 Canvas allows drawing graphics such as
+                rectangles, circles, lines and text using JavaScript.
+            </p>
+
+            <button>View Demo</button>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="footer">
+
+        <p>
+            © 2026 My Styled Webpage | HTML5 & CSS3 Laboratory
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Canvas</title>
+</head>
+
+<body>
+
+    <!-- ================= PART A: HTML5 CANVAS ================= -->
+
+    <section id="canvas" class="canvas-section">
+
+        <h2>HTML5 Canvas</h2>
+
+        <canvas id="myCanvas" width="700" height="300">
+            Your browser does not support the HTML5 Canvas.
+        </canvas>
+
+    </section>
+
+
+    <script>
+
+        /* Get Canvas */
+
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+
+        /* Rectangle */
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(40, 40, 150, 90);
+
+
+        /* Circle */
+
+        ctx.beginPath();
+        ctx.arc(300, 85, 45, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+
+        /* Line */
+
+        ctx.beginPath();
+        ctx.moveTo(420, 40);
+        ctx.lineTo(620, 140);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+
+        /* Display Name */
+
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Hari Charan", 220, 240);
+
+    </script>
+
+</body>
+
+</html>

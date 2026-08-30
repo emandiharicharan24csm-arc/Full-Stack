@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hari Charan | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b1020;
+            color: #ffffff;
+            transition: 0.4s;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(11, 16, 32, 0.85);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #a855f7;
+            font-size: 26px;
+        }
+
+        nav h2 span {
+            color: #22d3ee;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #22d3ee;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            flex-direction: column;
+
+            padding: 100px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(168, 85, 247, 0.25),
+                    transparent 40%
+                );
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #22d3ee;
+        }
+
+        .hero h3 {
+            color: #a855f7;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .btn {
+            margin-top: 25px;
+
+            padding: 13px 28px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: linear-gradient(
+                90deg,
+                #a855f7,
+                #22d3ee
+            );
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(34,211,238,0.3);
+        }
+
+        /* ================= CLOCK ================= */
+
+        #clock {
+            margin-top: 25px;
+
+            color: #22d3ee;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 2.5rem;
+
+            margin-bottom: 50px;
+
+            color: #a855f7;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-card {
+            max-width: 900px;
+            margin: auto;
+
+            padding: 35px;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 20px;
+
+            line-height: 1.8;
+
+            color: #cbd5e1;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 30px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(168,85,247,0.2);
+
+            border-radius: 15px;
+
+            color: #ffffff;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+
+            border-color: #22d3ee;
+
+            box-shadow:
+                0 10px 30px rgba(34,211,238,0.15);
+        }
+
+        .skill h3 {
+            color: #22d3ee;
+            margin-bottom: 8px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project {
+            padding: 30px;
+
+            background: rgba(255,255,255,0.05);
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+
+            border-color: #a855f7;
+
+            box-shadow:
+                0 15px 40px rgba(168,85,247,0.15);
+        }
+
+        .project h3 {
+            color: #22d3ee;
+
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+
+            line-height: 1.6;
+        }
+
+        /* ================= CONTACT ================= */
+
+        form {
+            max-width: 600px;
+
+            margin: auto;
+        }
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin: 10px 0;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 10px;
+
+            background: rgba(255,255,255,0.05);
+
+            color: white;
+
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #22d3ee;
+        }
+
+        textarea {
+            height: 150px;
+
+            resize: none;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #070b16;
+
+            color: #94a3b8;
+        }
+
+        /* ================= DARK/LIGHT THEME ================= */
+
+        .light {
+            background: #f8fafc;
+            color: #111827;
+        }
+
+        .light nav {
+            background: rgba(255,255,255,0.9);
+        }
+
+        .light nav ul li a {
+            color: #111827;
+        }
+
+        .light .hero {
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(168,85,247,0.15),
+                    transparent 40%
+                );
+        }
+
+        .light .about-card,
+        .light .skill,
+        .light .project {
+            background: white;
+
+            color: #111827;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .light .about-card,
+        .light .project p {
+            color: #475569;
+        }
+
+        .light input,
+        .light textarea {
+            background: white;
+            color: #111827;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 768px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h3 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <h2>
+            HARI<span>.</span>
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h1>
+            Hi, I'm <span>Hari Charan</span>
+        </h1>
+
+        <h3>
+            Python Developer • ML Enthusiast • Web Developer
+        </h3>
+
+        <p>
+            Computer Science student passionate about
+            Python, Machine Learning, Web Development
+            and building real-world applications.
+        </p>
+
+        <div id="clock"></div>
+
+        <button class="btn" onclick="toggleTheme()">
+            Toggle Theme
+        </button>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-card">
+
+            <p>
+                I am a Computer Science student interested in
+                software development, Python programming,
+                Machine Learning and Web Development.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy learning new technologies and developing
+                practical projects using Python, HTML, CSS,
+                JavaScript and Machine Learning.
+            </p>
+
+            <br>
+
+            <p>
+                My goal is to become a skilled software developer
+                and build useful real-world applications.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            My Skills
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML5</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS3</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Web Interactivity</p>
+            </div>
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <p>ML Models</p>
+            </div>
+
+            <div class="skill">
+                <h3>SQL</h3>
+                <p>Database Management</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            My Projects
+        </h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>
+                    HDI Prediction
+                </h3>
+
+                <p>
+                    A Machine Learning project that predicts
+                    Human Development Index using socio-economic
+                    indicators and a Linear Regression model.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Resume Analyzer
+                </h3>
+
+                <p>
+                    An AI-based Flask application that analyzes
+                    resumes and provides scores, strengths,
+                    weaknesses and suggestions.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    House Price Prediction
+                </h3>
+
+                <p>
+                    A Machine Learning regression project used
+                    to predict house prices from different
+                    housing features.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="msg"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+        <h3
+            id="output"
+            style="text-align:center;margin-top:20px;"
+        ></h3>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Hari Charan | Personal Portfolio
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* Theme Toggle */
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("light");
+
+        }
+
+
+        /* Contact Form */
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            let name =
+                document.getElementById("name").value;
+
+            document.getElementById("output").innerHTML =
+                "✅ Thank you " + name +
+                "! Your message has been received.";
+
+            document.querySelector("form").reset();
+
+        }
+
+
+        /* Live Clock */
+
+        function updateClock() {
+
+            let now = new Date();
+
+            document.getElementById("clock").innerHTML =
+                "🕒 " + now.toLocaleTimeString();
+
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</body>
+
+</html>
