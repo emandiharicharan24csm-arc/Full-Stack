@@ -1,0 +1,9 @@
+{
+  "name": "express-middleware-demo",
+  "version": "1.0.0",
+  "description": "Demonstrating Express Middleware",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

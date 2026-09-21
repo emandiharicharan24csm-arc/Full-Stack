@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.explanation {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.demo-area {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 2px solid #999;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /* transition makes the style changes smooth */
+    transition: all 0.4s ease;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+}
+
+.reset-btn:hover {
+    background-color: #c82333;
+}
+
+.status-msg {
+    color: #28a745;
+    font-size: 0.9em;
+    margin-top: 15px;
+    font-weight: bold;
+}

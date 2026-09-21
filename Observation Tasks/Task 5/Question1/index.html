@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Product Price Calculator</h1>
+        
+        <div class="input-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" placeholder="e.g., Laptop">
+        </div>
+
+        <div class="input-group">
+            <label for="productPrice">Price ($):</label>
+            <input type="number" id="productPrice" min="0" placeholder="0">
+        </div>
+
+        <div class="input-group">
+            <label for="productQuantity">Quantity:</label>
+            <input type="number" id="productQuantity" min="1" value="1">
+        </div>
+
+        <div class="result-box">
+            <h2>Total Cost</h2>
+            <p id="totalDisplay">Total for <span id="displayName">Product</span>: $<span id="displayTotal">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

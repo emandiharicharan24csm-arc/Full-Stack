@@ -1,0 +1,9 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "Demonstrating NPM and package.json",
+  "main": "app.js",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}

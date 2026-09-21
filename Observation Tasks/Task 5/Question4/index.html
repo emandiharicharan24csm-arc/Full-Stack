@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the DOM</h1>
+        
+        <!-- Explanation of DOM -->
+        <div class="explanation">
+            <h2>What is the DOM?</h2>
+            <p>The <strong>Document Object Model (DOM)</strong> is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages like JavaScript can interact with the page.</p>
+        </div>
+
+        <!-- Demonstration Area -->
+        <div class="demo-area">
+            <h2>Demonstration</h2>
+            
+            <!-- This is the element we will manipulate using JavaScript -->
+            <div id="targetElement" class="box" title="I am a box">
+                I am the original text.
+            </div>
+
+            <div class="buttons">
+                <button id="changeContentBtn">Change Content</button>
+                <button id="changeStyleBtn">Change Style</button>
+                <button id="changeAttrBtn">Change Attribute</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+            
+            <p id="attrStatus" class="status-msg"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
