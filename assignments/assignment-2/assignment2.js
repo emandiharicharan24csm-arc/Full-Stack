@@ -242,28 +242,28 @@ print("the index to locate the record immediately without examining every docume
 
 
 // =============================================================================
-// REAL-TIME EXTENSION ⭐
+// REAL-TIME EXTENSION
 // =============================================================================
 
 // 1. Find students scoring above 80
-print("\n--- ⭐ Extension 1: Find Students Scoring Above 80 ---");
+print("\n--- Extension 1: Find Students Scoring Above 80 ---");
 db.students.find({ marks: { $gt: 80 } }).forEach(printjson);
 
 // 2. Find students scoring below 50
-print("\n--- ⭐ Extension 2: Find Students Scoring Below 50 ---");
+print("\n--- Extension 2: Find Students Scoring Below 50 ---");
 db.students.find({ marks: { $lt: 50 } }).forEach(printjson);
 
 // 3. Find the highest-scoring student
 // Logic: Sort descending by marks and take the first record (.limit(1))
-print("\n--- ⭐ Extension 3: Find the Highest-Scoring Student ---");
+print("\n--- Extension 3: Find the Highest-Scoring Student ---");
 db.students.find().sort({ marks: -1 }).limit(1).forEach(printjson);
 
 // 4. Find students belonging to a particular branch ("CSE")
-print("\n--- ⭐ Extension 4: Find Students in Branch 'CSE' ---");
+print("\n--- Extension 4: Find Students in Branch 'CSE' ---");
 db.students.find({ branch: "CSE" }).forEach(printjson);
 
 // 5. Display students sorted according to marks
-print("\n--- ⭐ Extension 5: Display Students Sorted According to Marks ---");
+print("\n--- Extension 5: Display Students Sorted According to Marks ---");
 db.students.find().sort({ marks: -1 }).forEach(printjson);
 
 
