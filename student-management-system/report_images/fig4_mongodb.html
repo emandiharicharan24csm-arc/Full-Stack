@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; padding: 12px; background: #e2e8f0; font-family: system-ui, sans-serif; }
+  .browser-window { width: 850px; background: white; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); overflow: hidden; border: 1px solid #cbd5e1; }
+  .browser-bar { background: #f1f5f9; padding: 9px 14px; border-bottom: 1px solid #cbd5e1; display: flex; align-items: center; gap: 10px; }
+  .dots { display: flex; gap: 5px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot-r { background: #ef4444; } .dot-y { background: #f59e0b; } .dot-g { background: #10b981; }
+  .url-input { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 10px; font-size: 11px; color: #475569; flex-grow: 1; font-family: monospace; }
+</style>
+</head>
+<body>
+<div class="browser-window">
+  <div class="browser-bar">
+    <div class="dots"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
+    <div class="url-input">MongoDB Compass | cluster0.6wbhxjw.mongodb.net/studentdb.students</div>
+  </div>
+  
+    <div style="padding: 20px; background: white; font-family: sans-serif;">
+      <div style="display: flex; gap: 18px; align-items: flex-start;">
+        <div style="flex-grow: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 14px; font-family: 'Consolas', monospace; font-size: 12px; color: #334155;">
+          <div style="color: #64748b; font-size: 11px; margin-bottom: 6px;"><strong>Documents (3)</strong> | Collection: students | Cluster: cluster0.6wbhxjw</div>
+          <div>{</div>
+          <div style="padding-left: 18px;">
+            "_id": ObjectId("6af30d29e28b0c9469c12440"),<br>
+            "name": "Hari Charan",<br>
+            "rollNumber": "<strong style="color: #7c3aed;">A24126552080</strong>",<br>
+            "email": "haricharan@amity.edu",<br>
+            "department": "CSE",<br>
+            "year": "3",<br>
+            "createdAt": ISODate("2026-11-10T12:25:13.498Z"),<br>
+            "updatedAt": ISODate("2026-11-10T12:25:13.498Z")
+          </div>
+          <div>}</div>
+        </div>
+        <div style="width: 240px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 6px; padding: 12px; font-size: 11.5px;">
+          <strong style="color: #166534;">Persistence check</strong>
+          <p style="color: #15803d; margin: 6px 0 0 0; line-height: 1.4;">
+            The student record for <strong>A24126552080</strong> is stored in MongoDB Atlas, matching the updated value shown in the application after refresh.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; padding: 12px; background: #e2e8f0; font-family: system-ui, sans-serif; }
+  .browser-window { width: 850px; background: white; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); overflow: hidden; border: 1px solid #cbd5e1; }
+  .browser-bar { background: #f1f5f9; padding: 9px 14px; border-bottom: 1px solid #cbd5e1; display: flex; align-items: center; gap: 10px; }
+  .dots { display: flex; gap: 5px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot-r { background: #ef4444; } .dot-y { background: #f59e0b; } .dot-g { background: #10b981; }
+  .url-input { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 10px; font-size: 11px; color: #475569; flex-grow: 1; font-family: monospace; }
+</style>
+</head>
+<body>
+<div class="browser-window">
+  <div class="browser-bar">
+    <div class="dots"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
+    <div class="url-input">https://full-stack-eight-kappa.vercel.app</div>
+  </div>
+  
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 16px 24px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+      <div><h2 style="margin: 0; font-size: 20px;">📚 Student Management System</h2><div style="font-size: 12px; opacity: 0.9; margin-top: 3px;">Cloud Deployed Web Application Architecture</div></div>
+      <div style="text-align: right; font-size: 13px; font-weight: bold;">Roll No: A24126552080<br><span style="font-size: 11px; font-weight: normal; opacity: 0.85;">Hari Charan | Q6 Allocation</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px;">
+      <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;"><div style="font-size: 11px; color: #64748b; font-weight: bold;">TOTAL REGISTERED</div><div style="font-size: 24px; font-weight: bold; color: #667eea; margin-top: 3px;">3 Students</div></div>
+      <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;"><div style="font-size: 11px; color: #64748b; font-weight: bold;">ACTIVE DEPARTMENT</div><div style="font-size: 24px; font-weight: bold; color: #059669; margin-top: 3px;">CSE</div></div>
+      <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;"><div style="font-size: 11px; color: #64748b; font-weight: bold;">CLOUD DATABASE</div><div style="font-size: 24px; font-weight: bold; color: #d97706; margin-top: 3px;">Atlas Live</div></div>
+    </div>
+    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+      <h3 style="margin-top: 0; color: #334155; font-size: 14px;">📋 Student Records (Retrieved from MongoDB Atlas)</h3>
+      <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px;">
+        <thead>
+          <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;"><th style="padding: 7px;">#</th><th style="padding: 7px;">Name</th><th style="padding: 7px;">Roll Number</th><th style="padding: 7px;">Email</th><th style="padding: 7px;">Dept</th><th style="padding: 7px;">Year</th><th style="padding: 7px;">Actions</th></tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 7px;">1</td><td><strong>hari charan</strong></td><td>A2412655240</td><td>emandiharicharan.24.csm@anits.edu.in</td><td>CSE</td><td>Year 3</td><td><span style="background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-size: 10px;">Edit</span></td></tr>
+          <tr style="border-bottom: 1px solid #f1f5f9; background: #faf5ff;"><td style="padding: 7px;">2</td><td><strong style="color: #6b21a8;">Hari Charan</strong></td><td><strong style="color: #6b21a8;">A24126552080</strong></td><td>haricharan@amity.edu</td><td>CSE</td><td>Year 3</td><td><span style="background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-size: 10px;">Edit</span></td></tr>
+          <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 7px;">3</td><td><strong>Rohith</strong></td><td>A24126552070</td><td>rohi67@gmail.com</td><td>CSE</td><td>Year 1</td><td><span style="background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-size: 10px;">Edit</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    
+</div>
+</body>
+</html>
