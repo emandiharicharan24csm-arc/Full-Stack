@@ -52,6 +52,11 @@ app.use(express.json());
 // Any request to /api/students will be handled by studentRoutes
 app.use('/api/students', studentRoutes);
 
+// Health check endpoint (matches classroom assessment standards)
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Student Management API is running' });
+});
+
 // Root route — just to verify the server is running
 app.get('/', (req, res) => {
   res.json({

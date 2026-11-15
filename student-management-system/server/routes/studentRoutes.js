@@ -34,6 +34,27 @@ router.get('/', async (req, res) => {
 });
 
 // ─────────────────────────────────────────────
+// GET /api/students/reports/department-summary — MongoDB Aggregation
+// ─────────────────────────────────────────────
+router.get('/reports/department-summary', async (req, res) => {
+  try {
+    const summary = await Student.aggregate([
+      {
+        $group: {
+          _id: '$department',
+          studentCount: { $sum: 1 },
+          students: { $push: { name: '$name', rollNumber: '$rollNumber', year: '$year' } }
+        }
+      },
+      { $sort: { studentCount: -1 } }
+    ]);
+    res.status(200).json(summary);
+  } catch (error) {
+    res.status(500).json({ message: 'Unable to generate summary', error: error.message });
+  }
+});
+
+// ─────────────────────────────────────────────
 // GET /api/students/:id — Get ONE student by ID
 // ─────────────────────────────────────────────
 router.get('/:id', async (req, res) => {
