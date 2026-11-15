@@ -1,0 +1,21 @@
+/* ============================================
+   GLOBAL STYLES
+   These apply to EVERY page in your app.
+   ============================================ */
+
+/* Reset: Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes width/height include padding & border */
+}
+
+body {
+  /* Use a clean, modern font */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Light gray background for the whole page */
+  background-color: #f0f2f5;
+  color: #333;
+  /* Minimum height = full screen */
+  min-height: 100vh;
+}

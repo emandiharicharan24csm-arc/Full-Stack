@@ -1,0 +1,20 @@
+# Root .gitignore for full-stack student management system
+
+# Node dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production build output
+client/dist/
+
+# Secret Environment files (NEVER commit secrets!)
+.env
+client/.env
+server/.env
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.log
+

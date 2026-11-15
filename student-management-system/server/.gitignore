@@ -1,0 +1,5 @@
+# Dependencies (too large to upload)
+node_modules/
+
+# Environment variables (contains secrets!)
+.env
